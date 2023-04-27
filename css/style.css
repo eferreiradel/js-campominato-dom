@@ -1,0 +1,11 @@
+* {
+  border: 1px solid black;
+}
+
+.grid--item {
+  height: 50px;
+  text-align: center;
+  padding: 5px;
+  width: calc(100% / 10);
+  background-color: bisque;
+}

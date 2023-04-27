@@ -6,16 +6,21 @@ let generateGrid = document.querySelector("#generateGrid");
 let resetGrid = document.querySelector("#resetGrid");
 let setLevel = document.querySelector("#setLevel");
 
-generateGrid.addEventListener("clck", gridInit());
+//events
+generateGrid.addEventListener("click", gridInit);
 function gridInit() {
-  let gridItem = document.createElement("div");
-  gridItem.classList.add("grid--item");
+  let difficultLevel = setLevel.value;
 
-  console.log("ada");
-  gridContainer.appendChild(gridItem);
+  for (counter = 0; counter < difficultLevel; counter++) {
+    let gridItem = document.createElement("div");
+    gridItem.classList.add("grid--item");
+    gridContainer.appendChild(gridItem);
+  }
 }
 
 function generateRandomInt() {
   let randomNumber = Math.floor(Math.random() * 100 + 1);
   return randomNumber;
 }
+
+console.log("end -- ok");

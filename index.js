@@ -13,8 +13,16 @@ function gridInit() {
 
   for (counter = 0; counter < difficultLevel; counter++) {
     let gridItem = document.createElement("div");
-    gridItem.classList.add("grid--item");
+    gridItem.classList.add("grid--item", "btn");
+    gridItem.innerHTML = generateRandomInt();
     gridContainer.appendChild(gridItem);
+
+    let listNumber = parseInt([gridItem.innerHTML]);
+
+    if (listNumber % 3 === 0) {
+      alert("eccolo");
+      gridItem.classList.add("bomb");
+    }
   }
 }
 
@@ -23,4 +31,4 @@ function generateRandomInt() {
   return randomNumber;
 }
 
-console.log("end -- ok");
+console.log("check end -- ok");

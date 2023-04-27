@@ -3,9 +3,18 @@
 }
 
 .grid--item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0;
   height: 50px;
   text-align: center;
   padding: 5px;
+
   width: calc(100% / 10);
   background-color: bisque;
+}
+.bomb {
+  color: aliceblue;
+  background-color: red;
 }
